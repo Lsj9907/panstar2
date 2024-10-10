@@ -1,0 +1,355 @@
+@charset "utf-8";
+
+/****** contents ******/
+/* main-video */
+.main-video {
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    position: relative;
+    color: #fff;
+
+    background: url(./assets/images/main_diag1.png) no-repeat 0 0,
+        url(./assets/images/main_diag3.png) no-repeat 0 35%,
+        url(./assets/images/main_diag2.png) no-repeat 0 5%,
+        url(./assets/images/main_diag4.png) no-repeat 0 100%,
+        url(./assets/images/main_diag5.png) no-repeat 0 100%,
+        url(./assets/images/main_diag6.png) no-repeat 100% 100%,
+        url(./assets/images/main_diag7.png) no-repeat 100% 100%,
+        url(./assets/images/main_bg_check.png);
+}
+
+.main-video .youtube {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    /* vertical-align: bottom; */
+
+    position: relative;
+    z-index: -1;
+    /* 포지션 층위들 중 제일 아래로 위치 */
+}
+
+.main-video .main-video-text {
+    position: absolute;
+    top: 50%;
+    /* left: min(9.375vw, 20px); */
+    left: clamp(20px, 6vw, 9px);
+    transform: translateY(-50%);
+    font-style: italic;
+    text-align: left;
+}
+
+.main-video .main-video-text h2 {
+    font-size: 4rem;
+    line-height: 1.2;
+    text-shadow: 1px 1px 2px #000;
+    margin-left: 50px;
+}
+
+.main-video .main-video-text h2 span {
+    font-weight: 400;
+    display: block;
+    font-size: 3.5rem;
+    text-indent: 30px;
+}
+
+.main-video .main-video-text p {
+    width: 42%;
+    margin-top: 20px;
+    margin-left: 90px;
+    text-indent: 10px;
+}
+
+.main-video .main-video-widget {
+    position: absolute;
+    top: 50%;
+    right: 40px;
+    transform: translateY(-50%);
+    font-size: 14px;
+}
+
+.main-video .main-video-widget li {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 18px 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.main-video .main-video-widget li:hover {
+    background-image: url(./assets/images/main_reserve_ov_bg.png);
+}
+
+.main-video .main-video-widget li a {
+    display: block;
+    background: no-repeat 50% 30%;
+    padding-top: 50px;
+    line-height: 1;
+}
+
+.main-video .main-video-widget li:first-child a {
+    background-image: url(./assets/images/main_reserve_icon1_2108.png);
+}
+
+.main-video .main-video-widget li:last-child a {
+    background-image: url(./assets/images/main_reserve_icon2_2108.png);
+}
+
+/* glance */
+.glance .glance-list {
+    /* flex-container */
+    justify-content: center;
+    margin: 70px auto;
+}
+
+.glance .glance-list li {
+    border-right: 1px solid #ddd;
+    padding: 15px 20px 50px;
+    width: 25%;
+    max-width: 400px;
+}
+
+.glance .glance-listli:last-child {
+    border-right: none;
+}
+
+.glance,
+.glance-list li img {
+    width: auto;
+    /* 이미지 초기화 */
+}
+
+.glance .glance-list h3 {
+    font-family: "Play", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 300;
+    margin: 25px 0;
+}
+
+.glance .glance-list h3 strong {
+    font-weight: 700;
+    font-size: 3.6rem;
+}
+
+.glance .glance-list li h3::after {
+    content: "";
+    display: block;
+    width: 25px;
+    height: 1px;
+    background-color: #000;
+    margin: 10px auto;
+}
+
+.glance .glance-list li h4 {
+    font-size: 1.3rem;
+    color: #022974;
+    font-weight: 500;
+}
+
+.glance .glance-list p {
+    font-size: 14px;
+    color: #555555;
+}
+
+/* business */
+.business-wrapper {}
+
+.business-wrapper .business-left {
+    background-color: #eee;
+    width: 50%;
+    position: relative;
+    z-index: -1;
+}
+.business-wrapper .business-left::after{
+    content: "";
+    background-color: #eee;
+    position: absolute;
+    width: 70px;
+    height: 100%;
+    top: 0; left: 100%;
+}
+.business-wrapper .business-left .business-menu {
+    justify-content: center;
+    padding: 50px 0 40px;
+}
+.business-wrapper .business-left .business-menu li a {
+    display: block;
+    font-weight: 600;
+    margin: 10px;
+    position: relative;
+}
+.business-wrapper .business-left .business-menu li a:active {
+    color: #ff8a26;
+}
+.business-wrapper .business-left .business-menu li a:active::after {
+    content: "";
+    width: 100%; height: 3px;
+    position: absolute;
+    left: 50%; top: -8px;
+    transform: translateX(-50%);
+    background-color: #ff8a26;
+}
+.business-wrapper .business-left h3 {
+    font-size: 2rem;
+}
+.business-wrapper .business-left p {
+    color: #666;
+    width: 70%;
+    margin: 20px auto;
+}
+.business-wrapper .business-left .business-img-list {
+    justify-content: center;
+}
+.business-wrapper .business-left .business-img-list li{
+    margin: 40px 0.781vw 60px;
+}
+.business-wrapper .business-right {
+    width: 50%;
+    height: 580px;
+    margin-top: 100px;
+}
+.business-wrapper.business-right img {
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+}
+
+/* location */
+.location {}
+.location ,.location-list {
+    justify-content: center;
+}
+.location .location-list a {
+    display: block;
+    font-family: "Play", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 700;
+    margin: 30px 15px;
+}
+.location .location-list a.on{
+    color: #ff8a26;
+}
+
+.location .loaction-kakao {
+    background: url(./assets/images/bg_worldmap.png) no-repeat 50% / cover;
+    width: 90vw;
+    aspect-ratio: 3 / 1;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+.location .loaction-kakao .kakao-map{
+    width: 96%;
+    margin: 0 auto;
+    aspect-ratio: 3 / 1;
+    border: 1px solid #000;
+    border-radius: 30px;
+}
+
+/* contact */
+
+.contact .contact-wrapper {
+    justify-content: center;
+    align-items: stretch;
+    max-width: 1600px;
+    margin: 80px auto;
+    gap: 40px;
+    gap: 2.083vw;
+}
+.contact .contact-wrapper .press {
+    width: calc(40% - 2.083vw);
+    color: #fff;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url(./assets/images/wsw.jpg) no-repeat 50% / cover;
+}
+.contact .contact-wrapper .press:hover {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url(./assets/images/wsw.jpg) no-repeat 50% / cover;
+
+}
+.contact .contact-wrapper .press h3 {
+    background-color: #ff8a26;
+    width: 140px;
+    padding: 10px;
+}
+.contact .contact-wrapper .press h4 {
+    font-size: 2.3rem;
+    font-weight: 500;
+    width: 450px;
+    /* 한 줄 말줄임 */
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    margin: 30px auto;
+}
+.contact .contact-wrapper .press .press-date {
+    font-family: "Play", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 700;
+}
+.contact .contact-wrapper .notice {
+    width: calc(40% - 2.083vw);
+    text-align: left;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+.contact .contact-wrapper .notice h3 {
+    font-family: "Play", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 700;
+    text-transform: capitalize;
+    font-size: 2.4rem;
+}
+.contact .contact-wrapper .notice  .ghost-btn {
+    border-color: #999;
+    margin: 10px 0;
+}
+.contact .contact-wrapper .notice .notice-list {
+    width: 100%;
+    list-style: inside flower;
+}
+/* 기본 리스트 스타일 외 스탕리 설정 */
+@counter-style flower {
+    system: cyclic; /* 같은 값 반복*/
+    symbols: " - ";
+    suffix: " "; /* 머리말 기호 다음 처리 방식 */
+}
+
+.contact .contact-wrapper .notice .notice-list li {
+    border-bottom: 1px solid #ddd;
+    padding: 16px 6px;
+}
+.contact .contact-wrapper .notice .notice-list li a {
+    overflow: hidden;
+    width: 70%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: inline-block;
+    width: 75%;
+    vertical-align: middle;
+}
+.contact .contact-wrapper .notice .notice-list li a:hover {
+    text-decoration: underline;
+    /* text-underline-offset: 5px; */
+}
+.contact .contact-wrapper .notice .notice-list li .notice-date {
+    display: inline-block;
+    background: url(./assets/images/schedule_24dp_999999_FILL0_wght400_GRAD0_opsz24.png) no-repeat 0 50% / 16px;
+    padding-left : 20px;
+    opacity: 0.4;
+}
+.contact .contact-wrapper .recruit {
+    width: 20%;
+    background: url(./assets/images/bg_main_recruit.png) no-repeat 50% /cover;
+    position: relative;
+}
+.contact .contact-wrapper .recruit h3 {
+    font-family: "Play", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 700;
+    color: #ff8a26;
+    text-transform: capitalize;
+    font-size: 2.4rem;
+    text-align: left;
+    padding: 15px 20px 0;
+}
+.contact .contact-wrapper .recruit p {
+    text-align: left;
+    font-size: 1rem;
+    padding: 4px 22px;
+}
+.contact .contact-wrapper .recruit .more-btn {
+    bottom: 30px;
+    padding: 10px 30px;
+}
